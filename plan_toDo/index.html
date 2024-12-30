@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>TO-DO</h1>
+    </header>
+    
+    <button  class="conter-sides-ActionButton">Add</button>
+
+    <div id="modal" >
+        <input type="text" placeholder="your tash" id="YourTash">
+        <!-- 3awd ktb hdi -->
+        <form id="form1">
+            <select style="width: 20vw;" id="your-select-id">
+                <option value='Backlog'>Backlog</option>
+                <option value='To Do'>To Do</option>
+                <option value='In Progress'>In Progress</option>
+                <option value='Done'>Done</option>
+                <option value='test'>test</option>
+                <option value='' selected>
+                  Select a column
+                  </option>
+            </select>
+        </form>
+        <button id="buttonAddToClumn">add</button>
+    </div>
+    
+    <section id="Conter">
+        <section id="sideBacklog" class="conter-sides">
+            <h2 class="topSide">Backlog</h2>
+            
+        </section>
+
+        <section id="sideTodo" class="conter-sides">
+            <h2 class="topSide">To Do</h2>
+            
+        </section>
+
+        <section id="sideinProgres" class="conter-sides">
+            <h2 class="topSide">In Progress</h2>
+            
+        </section>
+
+        <section id="sidDone" class="conter-sides">
+            <h2 class="topSide">Done</h2>
+            
+        </section>
+
+        <section id="idtest" class="conter-sides">
+            <h2 class="topSide">test</h2>
+            
+        </section>
+    </section>
+
+    
+
+    <script src="main.js"></script>
+</body>
+</html>
