@@ -8,7 +8,8 @@ const questions = [
     { question: "La fonction 'setTimeout()' est utilisée pour exécuter du code après un délai donné.", answer: "true" },
     { question: "Le mot-clé 'this' fait toujours référence à l'objet global.", answer: "false" },
     { question: "Les promesses en JavaScript utilisent 'then()' et 'catch()' pour la gestion des résultats.", answer: "true" },
-    { question: "Une fonction fléchée (arrow function) a sa propre valeur 'this'.", answer: "false" }
+    { question: "Une fonction fléchée (arrow function) a sa propre valeur 'this'.", answer: "false" },
+    { question: "The exam is over", answer: "false" }
 ];
 
 let afichScore = document.getElementById('score');
@@ -29,6 +30,11 @@ afichQuestion.innerHTML = questions[i].question;
         i++;
         afichScore.innerHTML = scor;
         afichQuestion.innerHTML = questions[i].question;
+        if ((questions.length - 1) == i){
+            btnTrue.style.visibility = 'hidden';
+            btnfalse.style.visibility = 'hidden';
+            afichScore.innerHTML = `Score : ${scor}`;
+        }
     };
 
     btnfalse.onclick = function (){
@@ -38,6 +44,14 @@ afichQuestion.innerHTML = questions[i].question;
         i++;
         afichScore.innerHTML = scor;
         afichQuestion.innerHTML = questions[i].question;
+        if ((questions.length - 1) == i){
+            btnTrue.style.visibility = 'hidden';
+            btnfalse.style.visibility = 'hidden';
+            afichScore.innerHTML = `Score : ${scor}`;
+        }
     };
+
+    
+    
     
 
