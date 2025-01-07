@@ -1,4 +1,4 @@
-const questions = [
+let questions = [
     { question: "En JavaScript, 'null' est un type d'objet.", answer: "true" },
     { question: "Les tableaux en JavaScript commencent à l'index 1.", answer: "false" },
     { question: "La méthode 'map()' peut être utilisée pour transformer un tableau.", answer: "true" },
@@ -9,9 +9,9 @@ const questions = [
     { question: "Le mot-clé 'this' fait toujours référence à l'objet global.", answer: "false" },
     { question: "Les promesses en JavaScript utilisent 'then()' et 'catch()' pour la gestion des résultats.", answer: "true" },
     { question: "Une fonction fléchée (arrow function) a sa propre valeur 'this'.", answer: "false" },
-    { question: "The exam is over", answer: "false" }
 ];
 
+// let Qu = [];
 let afichScore = document.getElementById('score');
 let afichQuestion = document.getElementById('question');
 let btnTrue = document.getElementById('true-btn');
@@ -31,6 +31,7 @@ afichQuestion.innerHTML = questions[i].question;
         afichScore.innerHTML = scor;
         afichQuestion.innerHTML = questions[i].question;
         if ((questions.length - 1) == i){
+            afichQuestion.innerHTML =  "The exam is over";
             btnTrue.style.visibility = 'hidden';
             btnfalse.style.visibility = 'hidden';
             afichScore.innerHTML = `Score : ${scor}`;
@@ -45,6 +46,7 @@ afichQuestion.innerHTML = questions[i].question;
         afichScore.innerHTML = scor;
         afichQuestion.innerHTML = questions[i].question;
         if ((questions.length - 1) == i){
+            afichQuestion.innerHTML =  "The exam is over";
             btnTrue.style.visibility = 'hidden';
             btnfalse.style.visibility = 'hidden';
             afichScore.innerHTML = `Score : ${scor}`;
@@ -53,5 +55,17 @@ afichQuestion.innerHTML = questions[i].question;
 
     
     
-    
+    function randQution (){
+        let num ;
 
+        do{
+            num = Math.floor(Math.random() * questions.length);
+            for (let j = 0; i < Qu.length; j++){
+                if (Qu[j] == num){
+                    a = 1;
+                } else {
+                    a = 0;
+                }
+            }
+        }while(a);
+    }
